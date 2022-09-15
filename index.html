@@ -8,13 +8,20 @@
     <link href="styles.css" rel="stylesheet">
 </head>
 <body>
+    <!-- <img class="black-jack" src="./images/blackjack-1491404564.jpg" alt="blackjack"> -->
+    <!-- <button id="restart" onclick="restartGame()">RESTART</button> -->
     <div class="game-box">
         <h1>Blackjack</h1>
         <p id="message">Want to play a round?</p>
+        <div class="game-on">
         <p id="cards-el">Cards:</p>
         <p id="sum-el">Sum:</p>
+        </div>
+        <div class="buttons">
         <button id="start-game" onclick="startGame()">START GAME</button>
         <button id="new-card" onclick="newCard()">NEW CARD</button>
+        </div>
+        <p id="earnings"></p>
     </div>
     <script src="script.js"></script>
 </body>
