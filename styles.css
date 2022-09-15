@@ -44,7 +44,18 @@ body{
     font-style: italic;
 }
 
-.start-game{
+#start-game{
+    background-color: rgb(184, 151, 151);
+    outline: none;
+    border: 1px solid rgb(255, 115, 0);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-weight: 700;
+    font-size: 18px;
+    user-select: none;
+}
+
+#new-card{
     background-color: rgb(184, 151, 151);
     outline: none;
     border: 1px solid rgb(255, 115, 0);
