@@ -31,11 +31,13 @@ function getRandomCard() {
 
 function startGame(){
     isAlive = true;
+    hasBlackJack = false;
     let firstCard = getRandomCard();
     let secondCard = getRandomCard();
     cards = [firstCard, secondCard];
     sum = firstCard + secondCard;
     messageText.style.color = "white";
+    messageText.textContent = message;
     renderGame();
 }
 
@@ -65,10 +67,10 @@ function renderGame(){
 }
 
 function newCard(){
+    renderGame();
     if (isAlive === true && hasBlackJack === false) {
         let card = getRandomCard();
         sum += card;
         cards.push(card);
     }
-    renderGame();
 }
