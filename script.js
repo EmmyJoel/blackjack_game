@@ -14,17 +14,19 @@ function startGame(){
     sumText.textContent += " " + sum; 
     cardText.textContent += " " + firstCard + " " + secondCard;
     if (sum <= 20) {
-        message = "Do you want to draw a new card?"
+        message = "Do you want to draw a new card?";
     } else if (sum === 21) {
-        message = "You've got Blackjack!"
-        hasBlackJack = true
+        message = "You've got Blackjack!";
+        hasBlackJack = true;
     } else {
-        message = "You're out of the game!"
-        isAlive = false
+        message = "You're out of the game!";
+        isAlive = false;
     }
-    messageText.textContent = "How good are you mate?"
+    messageText.textContent = message;
 }
 
 function newCard(){
-    console.log("Drawing a new card from the desk")
+    let card = 5;
+    sum += card;
+    startGame();
 }
