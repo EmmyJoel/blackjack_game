@@ -53,6 +53,7 @@ body{
     font-weight: 700;
     font-size: 18px;
     user-select: none;
+    cursor: pointer;
 }
 
 #new-card{
@@ -64,4 +65,5 @@ body{
     font-weight: 700;
     font-size: 18px;
     user-select: none;
+    cursor: pointer;
 }
