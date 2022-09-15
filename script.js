@@ -2,6 +2,7 @@ const messageText = document.querySelector("#message");
 const sumText = document.querySelector("#sum-el");
 const cardText = document.querySelector("#cards-el");
 const playerEarn = document.querySelector("#earnings");
+const gameBox = document.querySelector(".game-box");
 
 
 let cards = [];
@@ -55,11 +56,11 @@ function renderGame(){
         message = "You've got Blackjack!";
         messageText.style.color = "yellow";
         hasBlackJack = true;
-    }
-    else{
-        message = "You're out of the game!";
+    }else{
+        messageText.textContent = "You're out of the game!";
         messageText.style.color = "red";
         isAlive = false;
+        // gameBox.style.display = "none";
     }
 }
 
