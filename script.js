@@ -4,6 +4,8 @@ const cardText = document.querySelector("#cards-el");
 const playerEarn = document.querySelector("#earnings");
 const gameBox = document.querySelector(".game-box");
 const ruleBox = document.querySelector(".game-rules");
+const blackJack = document.querySelector(".black-jack");
+const restartBtn = document.querySelector("#restart");
 
 
 let cards = [];
@@ -25,6 +27,9 @@ function continueBtn(){
 
 }
 
+function restartGame(){
+    window.location.reload();
+}
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1;
@@ -65,12 +70,14 @@ function renderGame(){
     } else if (sum === 21) {
         message = "You've got Blackjack!";
         messageText.style.color = "yellow";
+        blackJack.style.display = "block";
+        restartBtn.style.display = "block";
+        gameBox.style.opacity = "0";
         hasBlackJack = true;
     }else{
         messageText.textContent = "You're out of the game!";
         messageText.style.color = "red";
         isAlive = false;
-        // gameBox.style.display = "none";
     }
 }
 

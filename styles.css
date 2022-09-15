@@ -16,24 +16,23 @@ body{
     min-height:100vh;
 }
 
-/* .black-jack{
+.black-jack{
     position: absolute;
     z-index: 3;
     height: 500px;
     width: 400px;
     border-radius: 10px;
     display: none;
-} */
+}
 
 #restart{
     display: none;
     z-index: 50;
     position: absolute;
-    background-color: red;
     outline: none;
-    border: 1px solid white;
-    border-radius: 10px;
-    font-weight: 200;
+    border: 2px solid black;
+    border-radius: 8px;
+    font-weight: 700;
     font-size: 30px;
     padding: 5px 8px;
 }
@@ -145,6 +144,12 @@ button{
     font-size: 18px;
     user-select: none;
     cursor: pointer;
+    transition: all .2s ease;
+}
+
+button:hover{
+    background-color: rgb(172, 115, 115);
+    transform: scale(0.9);
 }
 
 #earnings {
@@ -186,5 +191,14 @@ button{
 
     #sum-el {
         font-size: 20px;
+    }
+
+    .black-jack{
+        height: 300px;
+        width: 75%;
+    }
+
+    .game-rules{
+        width: 80%;
     }
 }
