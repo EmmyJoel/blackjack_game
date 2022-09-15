@@ -16,7 +16,7 @@ let message = "Want to play a round?";
 
 let player = {
     name: "Bets",
-    chips: "150"
+    chips: "10"
 }
 
 playerEarn.textContent = player.name + ": $" + player.chips; 
@@ -82,6 +82,11 @@ function renderGame(){
 }
 
 function newCard(){
+    playerEarn.textContent = player.name + ": $" + player.chips; 
+
+        for (let i = 20; i < player.chips.length; i++){
+            playerEarn.textContent += + 50;
+        }
     renderGame();
     if (isAlive === true && hasBlackJack === false) {
         let card = getRandomCard();
