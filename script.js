@@ -8,7 +8,7 @@ let cards = [];
 let sum = 0;
 let hasBlackJack = false;
 let isAlive = false;
-let message = "";
+let message = "Want to play a round?";
 
 let player = {
     name: "Bets",
@@ -34,10 +34,13 @@ function startGame(){
     let secondCard = getRandomCard();
     cards = [firstCard, secondCard];
     sum = firstCard + secondCard;
+    messageText.style.color = "white";
     renderGame();
 }
 
 function renderGame(){
+    messageText.textContent = message;
+
     cardText.textContent = "Cards: ";
 
     for (let i = 0; i < cards.length; i++) {
@@ -50,20 +53,21 @@ function renderGame(){
         message = "Do you want to draw a new card?";
     } else if (sum === 21) {
         message = "You've got Blackjack!";
+        messageText.style.color = "yellow";
         hasBlackJack = true;
-    } else {
-        message = "You're out of the game!";
-        isAlive = false;
-        blackJack.style.display = "unset";
     }
-    messageText.textContent = message;
+    else{
+        message = "You're out of the game!";
+        messageText.style.color = "red";
+        isAlive = false;
+    }
 }
 
 function newCard(){
-    let card = getRandomCard();
     if (isAlive === true && hasBlackJack === false) {
+        let card = getRandomCard();
         sum += card;
         cards.push(card);
-        renderGame();
     }
+    renderGame();
 }
