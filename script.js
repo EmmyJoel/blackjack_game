@@ -3,6 +3,7 @@ const sumText = document.querySelector("#sum-el");
 const cardText = document.querySelector("#cards-el");
 const playerEarn = document.querySelector("#earnings");
 const gameBox = document.querySelector(".game-box");
+const ruleBox = document.querySelector(".game-rules");
 
 
 let cards = [];
@@ -17,6 +18,13 @@ let player = {
 }
 
 playerEarn.textContent = player.name + ": $" + player.chips; 
+
+function continueBtn(){
+    ruleBox.style.display = "none";
+    gameBox.style.opacity = "1";
+
+}
+
 
 function getRandomCard() {
     let randomNumber = Math.floor(Math.random() * 13) + 1;

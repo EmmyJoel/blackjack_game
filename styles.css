@@ -38,7 +38,41 @@ body{
     padding: 5px 8px;
 }
 
+.game-rules{
+    z-index: 100;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.747);
+    width: 350px;
+    min-height: 300px;
+    padding: 20px 25px;
+    border: 4px solid rgb(73, 73, 69);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.game-rules h3{
+    font-size: 25px;
+    text-align: center;;
+}
+.game-rules ul{
+    margin-bottom: 20px;
+    text-align: left;
+    margin-top: 15%;
+}
+
+.game-rules ul li{
+    margin: 8px 5px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    list-style-type: square;
+}
+
+.game-rules button{
+    text-align: center;
+}
+
 .game-box{
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.747);
     width: 350px;
     min-height: 350px;
@@ -101,19 +135,7 @@ body{
     font-size: 25px;
 }
 
-#start-game{
-    background-color: rgb(184, 151, 151);
-    outline: none;
-    border: 1px solid rgb(255, 115, 0);
-    border-radius: 8px;
-    padding: 10px 15px;
-    font-weight: 700;
-    font-size: 18px;
-    user-select: none;
-    cursor: pointer;
-}
-
-#new-card{
+button{
     background-color: rgb(184, 151, 151);
     outline: none;
     border: 1px solid rgb(255, 115, 0);
